@@ -39,25 +39,25 @@ const HeroBanner = () => {
             {/* Premium Badge */}
             <div className="flex justify-center md:justify-start">
 
-            <div className="inline-flex items-center gap-2  bg-[#0E6F73]/10 border border-[#0E6F73]/20 text-[#0E6F73] px-3 py-1.5 sm:px-4 sm:py-2 rounded-full
+              <div className="inline-flex items-center gap-2  bg-[#0E6F73]/10 border border-[#0E6F73]/20 text-[#0E6F73] px-3 py-1.5 sm:px-4 sm:py-2 rounded-full
 ">
 
-              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 20 20">
 
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clipRule="evenodd" />
-              </svg>
-              <span className="text-xs sm:text-sm font-semibold">
-                95% Success Rate • Verified Treatment
-              </span>
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clipRule="evenodd" />
+                </svg>
+                <span className="text-xs sm:text-sm font-semibold">
+                  95% Success Rate • Verified Treatment
+                </span>
 
+              </div>
             </div>
-</div> 
             {/* Main Heading with Gradient */}
-              <h1 className="
+            <h1 className="
          text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6
           text-center md:text-left
 ">
-              <span className="block">Break Free from</span>
+              Break Free from{" "}
               <span className="bg-gradient-to-r from-[#0E6F73] to-[#0a5458] bg-clip-text text-transparent">
                 Alcohol Addiction
               </span>
@@ -69,10 +69,21 @@ const HeroBanner = () => {
   text-lg sm:text-base lg:text-xl font-semibold text-gray-700 leading-snug mb-8 opacity-90
   text-center md:text-left
 ">
-              <span className="block mb-2">Professional, Compassionate & Effective</span>
+              Professional, Compassionate & Effective
               <span className="text-[#0E6F73]">
-                Alcohol De-addiction Treatment
+                {" "}Alcohol <br /> De-addiction Treatment
               </span>
+            </p>
+
+            {/* Description with better spacing */}
+            <p className="
+  text-base sm:text-base text-gray-600 leading-relaxed mb-8 max-w-xl
+  text-center text-justify
+  md:text-left md:text-start
+">
+              Yugantar provides <span className="font-medium text-gray-800">evidence-based treatment programs </span>
+              with expert medical guidance. Start your journey toward a healthier, alcohol-free life today with
+              compassionate care that transforms lives.
             </p>
 
 
