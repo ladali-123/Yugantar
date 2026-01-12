@@ -55,25 +55,26 @@ const HeroBanner = () => {
             {/* Main Heading with Gradient */}
             <h1 className="
          text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6
-          text-center md:text-left
+  text-center md:text-left
 ">
-              Break Free from{" "}
-              <span className="bg-gradient-to-r from-[#0E6F73] to-[#0a5458] bg-clip-text text-transparent">
-                Alcohol Addiction
-              </span>
+              
+              <span className="block sm:inline">Break Free from</span>{" "}
+  <span className="bg-gradient-to-r from-[#0E6F73] to-[#0a5458] bg-clip-text text-transparent">
+    Alcohol Addiction
+  </span>
             </h1>
 
 
             {/* Tagline with emphasis */}
-            <p className="
+           <p className="
   text-lg sm:text-base lg:text-xl font-semibold text-gray-700 leading-snug mb-8 opacity-90
   text-center md:text-left
 ">
-              Professional, Compassionate & Effective
-              <span className="text-[#0E6F73]">
-                {" "}Alcohol <br /> De-addiction Treatment
-              </span>
-            </p>
+  <span className="block sm:inline">Professional, Compassionate & Effective</span>{" "}
+  <span className="text-[#0E6F73] block sm:inline">
+    Alcohol De-addiction Treatment
+  </span>
+</p>
 
             {/* Description with better spacing */}
             <p className="
