@@ -57,7 +57,7 @@ const HeroBanner = () => {
          text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6
   text-center md:text-left
 ">
-              
+              Break Free from{" "}
               <span className="block sm:inline">Break Free from</span>{" "}
   <span className="bg-gradient-to-r from-[#0E6F73] to-[#0a5458] bg-clip-text text-transparent">
     Alcohol Addiction
