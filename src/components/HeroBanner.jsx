@@ -66,26 +66,34 @@ const HeroBanner = () => {
 
 
             {/* Tagline with emphasis */}
-           <p className="
-  text-lg sm:text-base lg:text-xl font-semibold text-gray-700 leading-snug mb-8 opacity-90
-  text-center md:text-left
-">
+          <p
+  className="
+    text-lg sm:text-base lg:text-xl font-semibold text-gray-700 leading-snug mb-8 opacity-90
+    text-center md:text-left
+    px-4 md:px-0
+  "
+>
   <span className="block sm:inline">Professional, Compassionate & Effective</span>{" "}
   <span className="text-[#0E6F73] block sm:inline">
     Alcohol De-addiction Treatment
   </span>
 </p>
 
+
             {/* Description with better spacing */}
-            <p className="
-  text-base sm:text-base text-gray-600 leading-relaxed mb-8 max-w-xl
-  text-center text-justify
-  md:text-left md:text-start
-">
-              Yugantar provides <span className="font-medium text-gray-800">evidence-based treatment programs </span>
-              with expert medical guidance. Start your journey toward a healthier, alcohol-free life today with
-              compassionate care that transforms lives.
-            </p>
+            <p
+  className="
+    text-base sm:text-base text-gray-600 leading-relaxed mb-8 max-w-xl
+    text-center text-justify
+    md:text-left md:text-start
+    px-4 md:px-0
+  "
+>
+  Yugantar provides <span className="font-medium text-gray-800">evidence-based treatment programs </span>
+  with expert medical guidance. Start your journey toward a healthier, alcohol-free life today with
+  compassionate care that transforms lives.
+</p>
+
 
 
             {/* CTA Button */}
