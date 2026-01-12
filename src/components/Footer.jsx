@@ -45,7 +45,8 @@ const Footer = () => {
 
             <div className="flex flex-col space-y-2">
               <p className="text-gray-400 text-sm">
-                <span className="font-semibold text-gray-200">Head Office:</span> Mumbai, Maharashtra
+                <span className="font-semibold text-gray-200">Head Office:</span> Pataleshwar Complex , SDO road , Hajipur - 800
+
               </p>
               <p className="text-gray-400 text-sm">
                 <span className="font-semibold text-gray-200">Helpline:</span> 

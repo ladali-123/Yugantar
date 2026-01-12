@@ -29,34 +29,109 @@ const HeroBanner = () => {
   return (
     <section id="home" className="relative bg-gradient-to-br from-[#F3F8FC] via-[#F6FBFC] to-[#F1FAF9] over">
 
-      <div className="container mx-auto px-4 py-16 lg:py-24">
+      <div className="container mx-auto px-4 py-10 lg:py-16">
 
         {/* TOP TWO SECTIONS */}
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
 
           {/* Left Content */}
-          <div className="lg:w-1/2 mb-12 lg:mb-0">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Break Free from <span className="text-[#0E6F73]">Alcohol Addiction</span>
-            </h1>
-            <p className="text-xl text-gray-700 mb-6">
-              Professional, Compassionate & Effective Alcohol De-addiction Treatment
-            </p>
-            <p className="text-gray-600 mb-8 text-lg">
-              Yugantar provides evidence-based treatment programs with 95% success rate.
-              Start your journey to a healthier, alcohol-free life today.
-            </p>
-            <div className="flex items-center gap-2 
-                bg-[#F1FAF9] text-green-800
-                px-4 py-2 rounded-full">
-              <svg className="w-4 h-4 text-[#0E6F73]" fill="currentColor" viewBox="0 0 20 20">
+          <div className="lg:w-1/2 mb-10 lg:mb-0 space-y-5">
+            {/* Premium Badge */}
+            <div className="flex justify-center md:justify-start">
+
+            <div className="inline-flex items-center gap-2  bg-[#0E6F73]/10 border border-[#0E6F73]/20 text-[#0E6F73] px-3 py-1.5 sm:px-4 sm:py-2 rounded-full
+">
+
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 20 20">
+
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm font-semibold">Verified</span>
+              <span className="text-xs sm:text-sm font-semibold">
+                95% Success Rate • Verified Treatment
+              </span>
+
+            </div>
+</div> 
+            {/* Main Heading with Gradient */}
+            <h1 className="
+         text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6
+          text-center md:text-left
+">
+              Break Free from{" "}
+              <span className="bg-gradient-to-r from-[#0E6F73] to-[#0a5458] bg-clip-text text-transparent">
+                Alcohol Addiction
+              </span>
+            </h1>
+
+
+            {/* Tagline with emphasis */}
+            <p className="
+  text-lg sm:text-base lg:text-xl font-semibold text-gray-700 leading-snug mb-8 opacity-90
+  text-center md:text-left
+">
+              Professional, Compassionate & Effective
+              <span className="text-[#0E6F73]">
+                {" "}Alcohol <br /> De-addiction Treatment
+              </span>
+            </p>
+
+            {/* Description with better spacing */}
+            <p className="
+  text-base sm:text-base text-gray-600 leading-relaxed mb-8 max-w-xl
+  text-center text-justify
+  md:text-left md:text-start
+">
+              Yugantar provides <span className="font-medium text-gray-800">evidence-based treatment programs </span>
+              with expert medical guidance. Start your journey toward a healthier, alcohol-free life today with
+              compassionate care that transforms lives.
+            </p>
+
+
+            {/* CTA Button */}
+            <div className="flex flex-wrap gap-4 items-center">
+              <a href="#home" className="inline-flex items-center gap-2 bg-[#0E6F73] text-white px-7 
+              py-3 rounded-full font-semibold text-base hover:bg-[#0a5458] transition-all duration-300
+               shadow-lg hover:shadow-xl">
+                Start Your Recovery
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+
+              <div className="flex items-center gap-3 text-gray-500">
+                <div className="flex -space-x-3">
+
+                  <img
+                    src="https://media.istockphoto.com/id/1205299877/photo/portrait-of-confident-woman-in-sari.webp?a=1&b=1&s=612x612&w=0&k=20&c=7o4WM_wyTTospa79c0tfFMXZDaB0KiCuXa82E0Lnk_U="
+
+                    alt="Recovered person"
+                    className="w-9 h-9 rounded-full object-cover border-2 border-white shadow-sm"
+                  />
+
+                  <img
+                    src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFufGVufDB8fDB8fHww"
+
+                    alt="Happy recovery"
+                    className="w-9 h-9 rounded-full object-cover border-2 border-white shadow-sm"
+                  />
+
+                  <img
+                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d29tYW58ZW58MHx8MHx8fDA%3D"
+
+                    alt="Successful recovery"
+                    className="w-9 h-9 rounded-full object-cover border-2 border-white shadow-sm"
+                  />
+
+                </div>
+
+                <span className="text-sm font-medium">
+                  1000+ Lives Transformed
+                </span>
+              </div>
+
             </div>
 
           </div>
-
           {/* Right Form */}
           <div className="lg:w-5/12 w-full">
             <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6">
@@ -155,17 +230,17 @@ const HeroBanner = () => {
               support, evidence-based recovery strategies. With professional medical guidance
               and a focus on safe,responsible care, we
               empower you to achieve lasting recovery, regain control of your life, and move toward a stable future.
-            
+
 
             </p>
 
             {/* Second Paragraph */}
             <p className="text-base lg:text-base text-gray-100 mb-6 leading-relaxed font-semibold">
-             With proven methods, expert advice, and inspiring real-life success stories, we make recovery not
+              With proven methods, expert advice, and inspiring real-life success stories, we make recovery not
               just achievable, but truly empowering. Every step you take with us brings you closer to the life
-               you deserve, full of energy, confidence, freedom, and inner happiness. Our supportive community 
-               and personalized guidance ensure you never walk this journey alone. Start today, embrace the process, 
-               and let us build a brighter,
+              you deserve, full of energy, confidence, freedom, and inner happiness. Our supportive community
+              and personalized guidance ensure you never walk this journey alone. Start today, embrace the process,
+              and let us build a brighter,
               stronger, and better tomorrow together one step at a time with trust, care, and unwavering support.
             </p>
 

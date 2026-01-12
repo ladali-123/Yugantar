@@ -48,8 +48,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: "Mumbai, Maharashtra",
-      description: "Confidential address provided upon consultation",
+      details: "Pataleshwar Complex , SDO road , Hajipur - 800",
       color: "bg-teal-50 border border-teal-100",
       iconBg: "bg-teal-600"
     },
@@ -114,7 +113,8 @@ const Contact = () => {
                     <div>
                       <label className="block text-gray-700 font-semibold mb-2">Phone Number *</label>
                       <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0E6F73] focus:border-[#0E6F73] outline-none transition-all"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2
+                         focus:ring-[#0E6F73] focus:border-[#0E6F73] outline-none transition-all"
                         placeholder="Enter your phone number"
                       />
                     </div>
@@ -130,7 +130,8 @@ const Contact = () => {
                   <div>
                     <label className="block text-gray-700 font-semibold mb-2">Program Interested In *</label>
                     <select name="program" value={formData.program} onChange={handleChange} required
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0E6F73] focus:border-[#0E6F73] outline-none transition-all bg-white"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2
+                       focus:ring-[#0E6F73] focus:border-[#0E6F73] outline-none transition-all bg-white"
                     >
                       <option value="">Select a program</option>
                       <option value="detox">Detoxification Program</option>
@@ -143,14 +144,17 @@ const Contact = () => {
                   <div>
                     <label className="block text-gray-700 font-semibold mb-2">Message (Optional)</label>
                     <textarea name="message" value={formData.message} onChange={handleChange} rows="4"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0E6F73] focus:border-[#0E6F73] outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2
+                       focus:ring-[#0E6F73] focus:border-[#0E6F73] outline-none transition-all resize-none"
                       placeholder="Tell us about your situation..."
                     />
                   </div>
 
                   <div>
                     <button onClick={handleSubmit}
-                      className="w-full bg-gradient-to-r from-[#0F4C81] to-[#0E6F73] text-white py-4 rounded-lg font-bold text-lg hover:from-[#0E6F73] hover:to-[#0F4C81] transition-all shadow-sm hover:shadow-md"
+                      className="w-full bg-gradient-to-r from-[#0F4C81] to-[#0E6F73] text-white py-4 
+                      rounded-lg font-bold text-lg hover:from-[#0E6F73] hover:to-[#0F4C81] transition-all
+                       shadow-sm hover:shadow-md"
                     >
                       Get Free Consultation
                     </button>
@@ -170,7 +174,8 @@ const Contact = () => {
               {contactMethods.map((method, index) => {
                 const IconComponent = method.icon;
                 return (
-                  <div key={index} className={`${method.color} rounded-xl p-6 border border-transparent shadow-sm hover:shadow-md transition-all`}>
+                  <div key={index} className={`${method.color} rounded-xl p-6 border border-transparent
+                   shadow-sm hover:shadow-md transition-all`}>
                     <div className="flex items-start space-x-4">
                       <div className={`${method.iconBg} p-3 rounded-xl text-white`}>
                         <IconComponent className="w-6 h-6" />
