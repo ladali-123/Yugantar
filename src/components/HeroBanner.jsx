@@ -53,11 +53,11 @@ const HeroBanner = () => {
             </div>
 </div> 
             {/* Main Heading with Gradient */}
-            <h1 className="
+              <h1 className="
          text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6
           text-center md:text-left
 ">
-              Break Free from{" "}
+              <span className="block">Break Free from</span>
               <span className="bg-gradient-to-r from-[#0E6F73] to-[#0a5458] bg-clip-text text-transparent">
                 Alcohol Addiction
               </span>
@@ -69,21 +69,10 @@ const HeroBanner = () => {
   text-lg sm:text-base lg:text-xl font-semibold text-gray-700 leading-snug mb-8 opacity-90
   text-center md:text-left
 ">
-              Professional, Compassionate & Effective
+              <span className="block mb-2">Professional, Compassionate & Effective</span>
               <span className="text-[#0E6F73]">
-                {" "}Alcohol <br /> De-addiction Treatment
+                Alcohol De-addiction Treatment
               </span>
-            </p>
-
-            {/* Description with better spacing */}
-            <p className="
-  text-base sm:text-base text-gray-600 leading-relaxed mb-8 max-w-xl
-  text-center text-justify
-  md:text-left md:text-start
-">
-              Yugantar provides <span className="font-medium text-gray-800">evidence-based treatment programs </span>
-              with expert medical guidance. Start your journey toward a healthier, alcohol-free life today with
-              compassionate care that transforms lives.
             </p>
 
 
