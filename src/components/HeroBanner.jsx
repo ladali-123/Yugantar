@@ -86,7 +86,7 @@ const HeroBanner = () => {
     text-base sm:text-base text-gray-600 leading-relaxed mb-8 max-w-xl
     text-center text-justify
     md:text-left md:text-start
-    px-4 md:px-0
+    px-6 md:px-0
   "
 >
   Yugantar provides <span className="font-medium text-gray-800">evidence-based treatment programs </span>
@@ -97,7 +97,7 @@ const HeroBanner = () => {
 
 
             {/* CTA Button */}
-            <div className="flex flex-wrap gap-4 items-center">
+            <div className="flex flex-wrap gap-4 items-center px-4 md:px-0">
               <a href="#home" className="inline-flex items-center gap-2 bg-[#0E6F73] text-white px-7 
               py-3 rounded-full font-semibold text-base hover:bg-[#0a5458] transition-all duration-300
                shadow-lg hover:shadow-xl">
