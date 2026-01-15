@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Counter = ({ end, suffix = "", duration = 2000 }) => {
   const [count, setCount] = useState(0);
@@ -30,47 +31,48 @@ const Counter = ({ end, suffix = "", duration = 2000 }) => {
 
 
 const Testimonials = () => {
+  const { t } = useLanguage();
   const testimonials = [
     {
-      name: "Rahul Mehta",
+      name: t('testimonial1Name'),
       age: 42,
-      duration: "Alcohol-free for 3 years",
-      quote: "Yugantar saved my life. After 15 years of alcohol dependency, I had lost all hope. The compassionate staff and structured program helped me rebuild my life from scratch. Today, I'm running my business successfully and enjoying time with my family.",
+      duration: t('testimonial1Duration'),
+      quote: t('testimonial1Quote'),
       rating: 5,
       image: "https://plus.unsplash.com/premium_photo-1682089804117-cea5d901647f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZmVzc2lvbmFsJTIwbWFuJTIwaW5kaWFufGVufDB8fDB8fHww"
 
     },
     {
-      name: "Sanjay Kumar",
+      name: t('testimonial2Name'),
       age: 38,
-      duration: "Sober for 2 years",
-      quote: "The holistic approach at Yugantar made all the difference. It wasn't just about quitting alcohol, but learning to live without it. The aftercare support has been invaluable in maintaining my sobriety through challenging times.",
+      duration: t('testimonial2Duration'),
+      quote: t('testimonial2Quote'),
       rating: 5,
       image: "https://images.unsplash.com/photo-1609770653328-a4d1dd377970?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGluZGlhbiUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D"
 
     },
     {
-      name: "Vikram Singh",
+      name: t('testimonial3Name'),
       age: 45,
-      duration: "Alcohol-free for 4 years",
-      quote: "As a businessman, I was skeptical about rehabilitation. But Yugantar's professional approach and complete privacy convinced me. The medical team was exceptional, and the counseling sessions changed my perspective on life.",
+      duration: t('testimonial3Duration'),
+      quote: t('testimonial3Quote'),
       rating: 5,
       image: "https://images.unsplash.com/photo-1530268729831-4b0b9e170218?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGluZGlhbiUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D"
 
     },
     {
-      name: "Anita Desai",
-      relation: "Wife of a patient",
-      quote: "My husband's transformation at Yugantar has been miraculous. The family counseling sessions helped us heal our relationship and communicate better. We're grateful to the entire team for giving us our family back.",
+      name: t('testimonial4Name'),
+      relation: t('testimonial4Relation'),
+      quote: t('testimonial4Quote'),
       rating: 5,
       image: "https://plus.unsplash.com/premium_photo-1681483544221-e04d719060ff?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
     },
     {
-      name: "Rohit Nair",
+      name: t('testimonial5Name'),
       age: 35,
-      duration: "Sober for 18 months",
-      quote: "The medical supervision during detox was excellent. The staff was always available, and the therapy sessions helped me understand my triggers. The aftercare program keeps me accountable and supported.",
+      duration: t('testimonial5Duration'),
+      quote: t('testimonial5Quote'),
       rating: 5,
       image: "https://media.istockphoto.com/id/1315976553/photo/portrait-of-a-smiling-man-of-indian-origin.webp?a=1&b=1&s=612x612&w=0&k=20&c=q3XnkehXZShGGerEGnuMNkZtennMr7Jb5d67evwJDg4="
 
@@ -101,16 +103,16 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-10 bg-gradient-to-b from-white to-teal-50/30">
+    <section id="testimonials" className="py-10 bg-linear-to-b from-white to-teal-50/30">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-            <span className="text-teal-600">Success</span> Stories
+            {t('testimonialsHeading')}
           </h2>
           <div className="w-20 h-1 bg-teal-600 mx-auto mb-4"></div>
           <p className="text-base text-gray-600 max-w-2xl mx-auto">
-            Real people, real transformations
+            {t('testimonialsSubtitle')}
           </p>
         </div>
 
@@ -121,7 +123,7 @@ const Testimonials = () => {
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-l-4 border-teal-600">
               <div className="flex flex-col lg:flex-row items-center gap-6 p-8 lg:p-10">
                 {/* Image with decorative elements */}
-                <div className="relative flex-shrink-0">
+                <div className="relative shrink-0">
                   <div className="absolute inset-0 bg-teal-100 rounded-full blur-2xl opacity-30"></div>
                   <img
                     src={testimonials[activeIndex].image}
@@ -202,7 +204,7 @@ const Testimonials = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
           <div className="relative bg-white rounded-xl p-5 text-center shadow-md hover:shadow-lg transition-shadow overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="text-3xl lg:text-4xl font-bold text-teal-600 mb-1">
                 <Counter end={2000} suffix="+" />
@@ -213,7 +215,7 @@ const Testimonials = () => {
           </div>
 
           <div className="relative bg-white rounded-xl p-5 text-center shadow-md hover:shadow-lg transition-shadow overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="text-3xl lg:text-4xl font-bold text-green-600 mb-1">
                 <Counter end={95} suffix="+" />
@@ -223,7 +225,7 @@ const Testimonials = () => {
           </div>
 
           <div className="relative bg-white rounded-xl p-5 text-center shadow-md hover:shadow-lg transition-shadow overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="text-3xl lg:text-4xl font-bold text-blue-600 mb-1">
                 <Counter end={85} suffix="+" />
@@ -233,7 +235,7 @@ const Testimonials = () => {
           </div>
 
           <div className="relative bg-white rounded-xl p-5 text-center shadow-md hover:shadow-lg transition-shadow overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="text-3xl lg:text-4xl font-bold text-orange-600 mb-1">
                 <Counter end={500} suffix="+" />

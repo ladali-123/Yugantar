@@ -1,50 +1,47 @@
 import React from "react";
 
+import { useLanguage } from '../context/LanguageContext';
+
 const Features = () => {
+  const { t } = useLanguage();
   const features = [
     {
-      title: "All Kinds Of Services For Addiction & Mental Health",
-      description:
-        "A range of treatment services for any & every kind of addiction & mental health problem.",
+      title: t('feature1'),
+      description: t('feature1Desc'),
     },
     {
-      title: "Rehab Experience In The Midst Of Lush Green Nature",
-      description:
-        "Breathtaking views, tranquil environment, & luxurious greenery to help patients unwind in the lap of nature.",
+      title: t('feature2'),
+      description: t('feature2Desc'),
     },
     {
-      title: "Government Authorized",
-      description:
-        "A government authorised facility that you can trust with your loved ones and rely upon.",
+      title: t('feature3'),
+      description: t('feature3Desc'),
     },
     {
-      title: "Customised & Client-Based Treatment Options",
-      description:
-        "Personalised treatment strategies to carve every individual’s unique path to recovery.",
+      title: t('feature4'),
+      description: t('feature4Desc'),
     },
     {
-      title: "Team Of Experts",
-      description:
-        "A team of trained & highly experienced individuals to address the unique challenges of every patient.",
+      title: t('feature5'),
+      description: t('feature5Desc'),
     },
     {
-      title: "Holistic Treatment Approach",
-      description:
-        "A holistic modern treatment approach to help patients recover physically, mentally, & emotionally.",
+      title: t('feature6'),
+      description: t('feature6Desc'),
     },
   ];
 
   return (
-   <section className="py-20 bg-gradient-to-b from-[#F7FAFD] to-[#F1FAF9]">
+   <section id="features" className="py-20 bg-linear-to-b from-[#F7FAFD] to-[#F1FAF9]">
   <div className="max-w-7xl mx-auto px-6">
 
     {/* Heading */}
     <div className="text-center mb-16">
       <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-        Why Choose <span className="text-[#0E6F73]">Yugantar</span>
+        {t('featuresHeading')}
       </h2>
       <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-        Compassionate, professional and nature-driven rehabilitation care
+        {t('featuresSub') || 'Compassionate, professional and nature-driven rehabilitation care'}
       </p>
     </div>
 
@@ -59,7 +56,7 @@ const Features = () => {
         >
           {/* Accent Line */}
           <div className="w-12 h-1 
-            bg-gradient-to-r from-[#0F4C81] to-[#0E6F73]
+            bg-linear-to-r from-[#0F4C81] to-[#0E6F73]
             rounded-full mb-4">
           </div>
 

@@ -20,7 +20,10 @@ const images = [
   image8,
 ];
 
+import { useLanguage } from '../context/LanguageContext';
+
 export default function PhotoGallery() {
+  const { t } = useLanguage();
   const sliderRef = useRef(null);
 
   const scroll = (direction) => {
@@ -30,8 +33,8 @@ export default function PhotoGallery() {
   };
 
   return (
-    <section className="w-full py-14 bg-white">
-      <h2 className="text-4xl font-bold text-center mb-10">Photo Gallery</h2>
+    <section id="gallery" className="w-full py-14 bg-white">
+      <h2 className="text-4xl font-bold text-center mb-10">{t('galleryHeading')}</h2>
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Left Button */}
@@ -50,7 +53,7 @@ export default function PhotoGallery() {
           {images.map((img, index) => (
             <div
               key={index}
-              className="min-w-[280px] md:min-w-[320px] h-[260px] md:h-[320px] lg:h-[360px] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition"
+              className="min-w-70 md:min-w-80 h-65 md:h-80 lg:h-90 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition"
             >
 
 

@@ -1,24 +1,25 @@
 import { ArrowUpRight } from "lucide-react";
+import { useLanguage } from '../context/LanguageContext';
 
-const services = [
-  "12 Step Program",
-  "Alcoholism Treatment",
-  "Ayurveda Treatment",
-  "Counseling",
-  "AA & NA Meetings",
-  "Anxiety Management",
-  "Corporate Program",
-  "Depression Treatment",
-];
-
-export default function ServicesOffered() {
+const Services = () => {
+  const { t } = useLanguage();
+  const services = [
+    t('service1'),
+    t('service2'),
+    t('service3'),
+    t('service4'),
+    t('service5'),
+    t('service6'),
+    t('service7'),
+    t('service8'),
+  ];
   return (
-    <section className="py-16 bg-[#FBF6EC]">
+    <section id="services" className="py-16 bg-[#FBF6EC]">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-          Services Offered
+          {t('servicesHeading')}
         </h2>
 
         {/* Services Grid */}
@@ -50,7 +51,7 @@ export default function ServicesOffered() {
             rounded-full text-sm font-medium
             hover:bg-teal-800 transition"
           >
-            View More
+            {t('viewMore')}
             <ArrowUpRight className="w-4 h-4" />
           </button>
         </div>
@@ -59,3 +60,4 @@ export default function ServicesOffered() {
     </section>
   );
 }
+export default Services;

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Phone, Calendar, Shield, Award, Clock, Users } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const CallToAction = () => {
+  const { t } = useLanguage();
   return (
-    <section className="py-12 bg-gradient-to-br from-slate-100 via-blue-50 to-slate-100
+    <section id="call-to-action" className="py-12 bg-gradient-to-br from-slate-100 via-blue-50 to-slate-100
 
     relative overflow-hidden">
 
@@ -30,23 +32,22 @@ const CallToAction = () => {
               <div className="lg:w-2/3 p-8 lg:p-12">
                 <div className="inline-block px-4 py-1 bg-[#F1FAF9] text-[#0E6F73] 
                 rounded-full text-sm font-medium mb-4">
-                  Take the First Step Today
+                  {t('firstStepBadge')}
                 </div>
 
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                  Begin Your Path to Recovery
+                  {t('ctaTitle')}
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Our experienced team of addiction specialists is available around the clock
-                  to provide confidential support and guidance tailored to your unique situation.
+                  {t('expertTeamDesc')}
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
                   {[
-                    ['Free Consultation', 'No commitment required'],
-                    ['100% Confidential', 'Privacy guaranteed'],
-                    ['24/7 Availability', 'Help when you need it'],
+                    [t('freeConsultation'), t('noCommitment')],
+                    [t('confidential'), t('privacyGuaranteed')],
+                    [t('available24'), t('helpWhenNeeded')],
                   ].map(([title, desc], i) => (
                     <div key={i} className="flex items-start space-x-3">
                       <div className="flex-shrink-0 w-5 h-5 bg-[#0E6F73] rounded-full 
@@ -81,14 +82,11 @@ const CallToAction = () => {
                 <div className="space-y-4">
                   <a
                     href="tel:+911234567890"
-                    className="group block bg-gradient-to-r 
-                    from-[#0F4C81] to-[#0E6F73] text-white text-center 
-                    py-4 px-6 rounded-xl font-semibold 
-                    hover:opacity-90 transition-all duration-300 shadow-md"
+                    className="group block bg-linear-to-r from-[#0F4C81] to-[#0E6F73] text-white text-center py-4 px-6 rounded-xl font-semibold hover:opacity-90 transition-all duration-300 shadow-md"
                   >
                     <div className="flex items-center justify-center mb-1">
                       <Phone className="w-5 h-5 mr-2" />
-                      <span>Call Now</span>
+                      <span>{t('ctaPhone')}</span>
                     </div>
                     <div className="text-xl font-bold">+91 12345 67890</div>
                     <div className="text-sm opacity-90 mt-1">Available 24/7</div>
@@ -104,15 +102,15 @@ const CallToAction = () => {
                   >
                     <div className="flex items-center justify-center">
                       <Calendar className="w-5 h-5 mr-2" />
-                      <span>Schedule Consultation</span>
+                      <span>{t('consultationHeading')}</span>
                     </div>
                   </a>
 
                   <div className="pt-4 border-t border-[#E3F1F1]">
                     <p className="text-xs text-gray-500 text-center leading-relaxed">
-                      No obligation required<br />
-                      All information kept strictly confidential<br />
-                      Insurance verification assistance available
+                      {t('noObligation')}<br />
+                      {t('confidentialInfo')}<br />
+                      {t('insuranceHelp')}
                     </p>
                   </div>
                 </div>
@@ -134,10 +132,10 @@ const CallToAction = () => {
                   <Icon className="w-8 h-8 text-[#0E6F73] mb-3" />
                   <div className="text-slate-700 font-semibold text-sm">
                     {[
-                      'Expert Medical Team',
-                      'Complete Privacy',
-                      'Evidence-Based Care',
-                      'Round-the-Clock Support',
+                      t('expertMedical'),
+                      t('completePrivacy'),
+                      t('evidenceBased'),
+                      t('roundClock'),
                     ][i]}
                   </div>
                 </div>
